@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title> Google Glass </title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/form.css">
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+      function calc_total(){
+        var qtd = parseInt(document.getElementById('cqtd').value);
+        tot = qtd * 1500;
+        document.getElementById('ctot').value = tot;
+      }
+    </script>
+  </head>
+  <body>
+<div id="interface">
+     <header id="cabecalho">
+     <hgroup>
+       <h1>Google Glass</h1>
+       <h2>A revolução do Google está chegando</h2>
+     </hgroup>
+ <img id="icone" src="_imagens/contato.png">
+<nav id="menu">
+<h1>Menu Principal</h1>
+<ul type="disc">
+        <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+        <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')" ><a href="specs.html">Especificações</a></li>
+        <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">fale conosco</a></li>
+
+  </ul>
+  </nav>
+  </header>
+
+<section id="corpo-full">
+<article id="noticia-principal">
+  <header id="cabecalho-artigo">
+          <hgroup>
+            <h3>Glass > Fale Conosco</h3>
+            <h1>Contato Formulário de Contato</h1>
+            <h2>por Douglas Schussler</h2>
+            <h3 class="direita">Atualizado em 23/abril/2017   </h3>
+          </hgroup>
+    </header>
+  </article>
+</section>
+<form method="post" id="fcontato" action="mailto:schussler855@gmail.com" oninput="calc_total();">
+<fieldset id="usuario">
+  <legend>Identificação do Usuário</legend>
+    <p><label for="cnome">Nome:</label><input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="nome completo"></p>
+    <p><label for="csenha">Senha:</label><input type="password" name="tsenha" id="csenha"size="8" maxlength="8" placeholder="8 digitos"></p>
+    <p>E-mail:<input type="email" name="tmail" id="cmail" size="20" maxlength="40" placeholder="exemplo@email.com"></p>
+    <fieldset id="sexo"><legend>sexo</legend>
+          <input type="radio" name="tsexo" id="cmasc" checked=""> <label for="cmasc">Masculino</label><br>
+          <input type="radio" name="tsexo" id="cfem" > <label for="cfem">Feminino</label>
+    </fieldset>
+      <p>Data de Nascimento:<input type="date" name="" name="tdata" id=""></p>
+</fieldset>
+<fieldset id="endereco">
+  <legend>Endereço do Usuário</legend>
+    <p>Logradouro:<input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="rua, av ,trav,... "></p>
+      <p>Número:<input type="number" name="rnum" id="cnum"></p>
+      <p>Estado:<select id="cest" name="test">
+        <optgroup label="Regiao Sudeste">
+          <option selected value="rj">Rio de Janeiro</option>
+          <option value="sp">Sao Paulo</option>
+          <option value="mg">Minas Gerais</option>
+        </optgroup>
+      <optgroup label="Regiao Sul">
+        <option value="pr">parana</option>
+        <option value="sc">Santa Catarina</option>
+        <option value="rs">Rio Grande do Sul</option>
+      </optgroup>
+        </optgroup>
+      </select></p>
+
+
+      <p>Cidade:<input type="text" name="tcid"
+        id="ccid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+        <datalist id="cidades">
+          <option value="Rio de Janeiro"></option>
+            <option value="Sao Gonçalo"></option>
+              <option value="Niteroi"></option>
+                <option value="Itaborai"></option>
+        </datalist>
+
+
+</fieldset>
+
+<fieldset id="mensagem">
+    <legend>Mensagem do Usuário</legend>
+    <p> Grau de Urgência:Min<input type="range" name="turg" min="0" max="10" step="2"
+      id="curg" >Max</p>
+
+    <p> Mensagem:<textarea name="tmsg" id="cmsg" rows="4" cols="40" placeholder="Deixe aqui sua mensagem"></textarea></p>
+</fieldset>
+
+<fieldset id="pedido">
+    <legend>Quero um Google Glass</legend>
+      <p><input type="checkbox" checked name="tped" id="cped"  >Gostaria de adquirir um Google Glass quando</p>
+      <p>Cor:<input type="color" name="tcor" id="ccor" value="#000fff"></p>
+      <p>Quantidade:<input type="number" name="tqtd" id="cqtd" value="1" min="0" max="5"></p>
+      <p>Preço Total: R$<input type="text" name="ttot" id="ctot" placeholder="Total a Pagar" readonly>
+      </p>
+
+</fieldset>
+
+
+<input type="image" name="tenviar" src="_imagens/botao-enviar.png">
+</form>
+
+<footer id=rodape>
+  <p>Copyright &copy; 2017 - by Douglas Schussler<br/>
+  <a href="https://www.facebook.com/douglas.schussler" target="_blank">Facebook</a></footer></footer>
+</div>
+</body>
+</html>

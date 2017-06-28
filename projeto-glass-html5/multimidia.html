@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title> Google Glass </title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/media.css">
+    <script src="_javascript/funcoes.js"></script>
+  </head>
+  <body>
+<div id="interface">
+     <header id="cabecalho">
+     <hgroup>
+       <h1>Google Glass</h1>
+       <h2>A revolução do Google está chegando</h2>
+     </hgroup>
+ <img id="icone" src="_imagens/multimidia.png">
+<nav id="menu">
+<h1>Menu Principal</h1>
+<ul type="disc">
+        <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+        <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')" ><a href="specs.html">Especificações</a></li>
+        <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">fale conosco</a></li>
+
+  </ul>
+  </nav>
+  </header>
+
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+              <h3>Glass > Multimídia</h3>
+              <h1>sons e videos</h1>
+              <h2>por Douglas Schussler</h2>
+              <h3 class="direita">Atualizado em 23/abril/2017 </h3>
+          </hgroup>
+        </header>
+        <div id="tv-radio" >
+          <audio id="musica" controls="controls">
+            <source src="_media/Green Day - 21 Guns Official Music Video.mp3" type="audio/mpeg"/>
+              Desculpe,mas nao foi possivel carregar o audio
+          </audio>
+          <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+            <source src="_media/video1.mp4" type="video/mp4">
+              Desculpe,mas nao foi possivel carregar o video
+          </video>
+        </div>
+    </article>
+</section>
+
+
+
+<footer id=rodape>
+  <p>Copyright &copy; 2017 - by Douglas Schussler<br/>
+  <a href="https://www.facebook.com/douglas.schussler" target="_blank">Facebook</a></footer>
+</div>
+</body>
+</html>
